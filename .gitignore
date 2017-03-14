@@ -1,0 +1,6 @@
+# intellij idea configurations
+*.iml
+.idea/
+
+src/
+__pycache__/
