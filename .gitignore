@@ -2,5 +2,10 @@
 *.iml
 .idea/
 
-src/
+# python
 __pycache__/
+*.pyc
+
+# others
+__MACOSX/
+PCI_Code Folder/

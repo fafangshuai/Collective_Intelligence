@@ -132,9 +132,12 @@ def getRecommendations(prefs,person,similarity=sim_pearson):
     rankings.reverse();
     return rankings;
 
-# test
-def test(prefs,p):
-    scores = [sim_distance(prefs, p, other)
-                for other in prefs if other != p]
-    print(scores)
+# 转换
+def transformPrefs(prefs):
+    result={}
+    for person in prefs:
+        for item in prefs[person]:
+            result.setdefault(item,{})
+            result[item][person] = prefs[person][item]
+    return result;
 
