@@ -7,6 +7,6 @@ def initializeUserDict(tag,count=5):
 	for p1 in get_popular(tag=tag)[0:count]:
 		# 查找所有张贴该链接的用户
 		for p2 in get_urlposts(p1['href']):
-			user=p2['user'];
+			user=p2['user']
 			user_dict[user]={}
 	return user_dict
